@@ -9,7 +9,22 @@ namespace ConsoleApp1
     public class Array<T>
     {
         private T[] array;
-        public void OutputArray(T[] array)
+
+        public Array(int elementCount) 
+        {
+            array = new T[elementCount];
+        }
+
+        public void FillArray(params T[] elements)
+        {
+            array = elements;
+        }
+
+        public T[] GetArray()
+        {
+            return array;
+        }
+        public void OutputArray()
         {
 
         }
@@ -22,11 +37,6 @@ namespace ConsoleApp1
         public void DeleteArray(T obj)
         {
 
-        }
-
-        public T[] CreateArray(int elementCount)
-        {
-            throw new Exception("функция не реализована");
         }
     }
 }
